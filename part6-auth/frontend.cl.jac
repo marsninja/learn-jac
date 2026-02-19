@@ -2,6 +2,11 @@
 
 import from "@jac/runtime" { jacSignup, jacLogin, jacLogout, jacIsLoggedIn }
 
+sv import from main {
+    get_tasks, add_task, toggle_task, delete_task,
+    generate_list, get_shopping_list, clear_shopping_list
+}
+
 import "./styles.css";
 
 def:pub app -> JsxElement {
