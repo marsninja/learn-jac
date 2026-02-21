@@ -1,11 +1,11 @@
-# part3-4-day-planner
+# day-planner
 
 A Jac client-side application with React support.
 
 ## Project Structure
 
 ```
-part3-4-day-planner/
+day-planner/
 ├── jac.toml              # Project configuration
 ├── main.jac              # Main application entry
 ├── components/           # Reusable components

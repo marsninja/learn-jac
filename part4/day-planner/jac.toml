@@ -1,7 +1,7 @@
 [project]
-name = "part6-auth"
+name = "day-planner"
 version = "1.0.0"
-description = "Jac client application: part6-auth"
+description = "Jac client application: day-planner"
 entry-point = "main.jac"
 
 [dependencies]

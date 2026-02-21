@@ -1,11 +1,11 @@
-# part6-auth
+# day-planner-auth
 
 A Jac client-side application with React support.
 
 ## Project Structure
 
 ```
-part6-auth/
+day-planner-auth/
 ├── jac.toml              # Project configuration
 ├── main.jac              # Main application entry
 ├── components/           # Reusable components

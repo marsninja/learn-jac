@@ -78,6 +78,7 @@ impl app.handleSignup -> None {
 impl app.handleLogout -> None {
     jacLogout();
     isLoggedIn = False;
+    isSignup = False;
     tasks = [];
     ingredients = [];
 }

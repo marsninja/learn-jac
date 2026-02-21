@@ -1,11 +1,11 @@
-# part7-walkers
+# day-planner
 
 A Jac client-side application with React support.
 
 ## Project Structure
 
 ```
-part7-walkers/
+day-planner/
 ├── jac.toml              # Project configuration
 ├── main.jac              # Main application entry
 ├── components/           # Reusable components

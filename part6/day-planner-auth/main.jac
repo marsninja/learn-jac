@@ -59,7 +59,7 @@ node ShoppingItem {
 # --- Task Endpoints ---
 
 """Add a task with AI categorization."""
-def:pub add_task(title: str) -> dict {
+def:priv add_task(title: str) -> dict {
     category = str(categorize(title)).split(".")[-1].lower();
     task = root ++> Task(id=str(uuid4()), title=title, category=category);
     return {
@@ -69,7 +69,7 @@ def:pub add_task(title: str) -> dict {
 }
 
 """Get all tasks."""
-def:pub get_tasks -> list {
+def:priv get_tasks -> list {
     return [
         {"id": t.id, "title": t.title, "done": t.done, "category": t.category}
         for t in [root-->](?:Task)
@@ -77,7 +77,7 @@ def:pub get_tasks -> list {
 }
 
 """Toggle a task's done status."""
-def:pub toggle_task(id: str) -> dict {
+def:priv toggle_task(id: str) -> dict {
     for task in [root-->](?:Task) {
         if task.id == id {
             task.done = not task.done;
@@ -91,7 +91,7 @@ def:pub toggle_task(id: str) -> dict {
 }
 
 """Delete a task."""
-def:pub delete_task(id: str) -> dict {
+def:priv delete_task(id: str) -> dict {
     for task in [root-->](?:Task) {
         if task.id == id {
             del task;
@@ -104,7 +104,7 @@ def:pub delete_task(id: str) -> dict {
 # --- Shopping List Endpoints ---
 
 """Generate a shopping list from a meal description."""
-def:pub generate_list(meal: str) -> list {
+def:priv generate_list(meal: str) -> list {
     for item in [root-->](?:ShoppingItem) {
         del item;
     }
@@ -128,7 +128,7 @@ def:pub generate_list(meal: str) -> list {
 }
 
 """Get the current shopping list."""
-def:pub get_shopping_list -> list {
+def:priv get_shopping_list -> list {
     return [
         {"name": s.name, "quantity": s.quantity, "unit": s.unit,
          "cost": s.cost, "carby": s.carby}
@@ -137,7 +137,7 @@ def:pub get_shopping_list -> list {
 }
 
 """Clear the shopping list."""
-def:pub clear_shopping_list -> dict {
+def:priv clear_shopping_list -> dict {
     for item in [root-->](?:ShoppingItem) {
         del item;
     }

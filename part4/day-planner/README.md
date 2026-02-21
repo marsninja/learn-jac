@@ -1,11 +1,11 @@
-# part5-ai
+# day-planner
 
 A Jac client-side application with React support.
 
 ## Project Structure
 
 ```
-part5-ai/
+day-planner/
 ├── jac.toml              # Project configuration
 ├── main.jac              # Main application entry
 ├── components/           # Reusable components

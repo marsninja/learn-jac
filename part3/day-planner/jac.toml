@@ -1,7 +1,7 @@
 [project]
-name = "part5-ai"
+name = "day-planner"
 version = "1.0.0"
-description = "Jac client application: part5-ai"
+description = "Jac client application: day-planner"
 entry-point = "main.jac"
 
 [dependencies]
